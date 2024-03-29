@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 5%;
+    background-color:black;
+}
+header img{
+    width: 7%;
+    align-items: center;
+    justify-items: center;
+    padding: 0 45vw;
+}
+nav{
+    width: 100%;
+    padding: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(213, 38, 38);
+}
+nav .logo{
+    width: 7%;
+}
+nav .menu{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav .menu a{
+    color: #fff;
+    margin-left: 25px;
+    position: relative;
+    font-size: 20px;
+}
+nav .menu a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #dd0707;
+    transition: 0.4s;
+}
+nav .menu a:hover::after{
+    width: 100%;
+}
+.carr{
+    width: 100%;
+    height: 100vh;
+    background: url(sf24.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about{
+    height: 25vw;
+    background-color: black;
+    padding: 10px 55px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.about h1{
+    justify-content: center;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:antiquewhite;
+    padding-top: 15px;
+    padding-left: 39vw;
+}
+.about span{
+    font-family:'Special Elite';
+    padding-left: 34vw;
+    font-size: 45px;
+    color:#ed0808;
+}
+.about p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color:beige;
+    padding: 0 180px;
+    padding-bottom: 12px;
+}
+section{
+    padding: 2.5em;
+}
+.specs{
+    background:url(f_bg.jpg) no-repeat center;
+    background-size: cover;
+    color: beige;
+    min-height: 40em;
+    position: relative;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spec-header{
+    color: #1b0606;
+}
+.specs h2{
+    font-size: 40px;
+    padding-left: 1.2em;
+    border-left: 0.1em #e91e1e solid;
+}
+.spec-header, .specs li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.spec-header, .specs ul{
+    position: relative;
+    z-index: 1;
+}
+.specs ul{
+    width: 40em;
+    margin-top: 3em;
+}
+.specs li{
+    padding: 0.6em 0;
+    border-bottom: #555 1px solid;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+.specs li span:first-child{
+    color: rgb(232, 232, 22);
+}
+.specs::before{
+    content: '';
+    background: rgba(57, 57, 57, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.view{
+   width: 100%;
+   height: 100vh;
+   display: grid;
+   place-items: center;
+   background-color:black;
+}
+.slider{
+    width: 60%;
+    height: 600px;
+    background-image: url(z.webp);
+    background-size: 100% 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: change_img 15s linear infinite;
+
+}
+@keyframes change_img {
+    0%{
+        background-image: url(z.webp);
+    }
+    25%{
+        background-image: url(z2.webp);
+    }
+    50%{
+        background-image: url(z3.webp);
+    }
+    75%{
+        background-image: url(z4.webp);
+    }
+    100%{
+        background-image: url(z.webp);
+    }
+}
+.review{
+    background-color: #3e2c2c;
+}
+.rev-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.rev-img{
+    width:70px;
+    height: 70px;
+}
+.rev-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+.rev-container .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 4px 14px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    background-color:beige;
+}
+.review h1{
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+}
+.rev-container .box h2{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0.5rem 0 0.5rem;
+}
+.rev-container .box h3{
+    font-size: 15px;
+    font-weight: 600;
+}
+.rev-container .box p{
+    font-style: italic;
+    font-weight: 500;
+}
